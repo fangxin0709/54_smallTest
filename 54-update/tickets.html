@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024法國國際商務展(FIBEX)</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+         form{
+          position: relative;
+          /* left: 750px; */
+          width: 500px;
+          /* border: outset 5px ; */
+          padding: 20px;
+          border-color: rgb(105, 137, 189);
+          background-color: rgba(255, 255, 255, 0.344);
+          transition: ease 0.5s;
+          border-radius: 10px;
+        }
+        form:hover{
+           background-color: rgba(255, 255, 255, 0.54);
+          transition: ease 0.5s;
+          box-shadow: 0 0 20px #0000004f;
+          /* transform:scale(1.001); */
+         }
+         .btn{
+          margin: 10px 0;
+         }
+         body{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            background-image: url(./img/news1.jpg);
+            transition: background-image 0.5s ease;
+            background-size: 100% 1080px;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(20px);
+        }
+         .veri{
+           font-family: 'Courier New', Courier, monospace;
+           font-size: xx-large;
+           display: flex;
+           align-items: center;
+           margin: 0 0 0 30px;
+           font-style: italic;
+           user-select: none;
+         }
+         .form-control {
+          width: 450px;
+          height: 50px;
+          border-radius: 0px;
+          border: none;
+          background: #ffffffd3;
+          border-bottom: 2px solid #333;
+          transition: all 0.3s ease;
+        }
+        .form-control::placeholder {
+          font-size: 20px;
+          color: #aaa;
+          transition: all 0.3s ease;
+          
+        }
+        .form-control:focus::placeholder {
+          font-size: 18px;
+          color: #007bff;
+        }
+        .b-green{
+          background-color: rgb(16, 178, 16);
+          position: relative;
+          transition: ease 0.5s;
+          transform: scale(1);
+          color: #fff;
+        }
+        .b-green:hover{
+          color: #eef0a4;
+          transition: ease 0.5s;
+          transform: scale(1.01);
+          background-color: #16a750;
+        }
+    </style>
+</head>
+<body>
+<!--導覽列-->
+<nav style="font-size: 30px;display: flex;justify-content: space-between;" class="navbar navbar-expand-lg navbar-light">
+  <img style="height: 70px;width: 75px;" src="./img/fibex最終.png" alt="">
+  <!--快速指法 ul.navbar-nav>li.nav-item*4>a.nav-link -->
+  <div class="navbar-nav">
+    <div style="margin:10px;border-bottom: #2b2b2b86 4px solid;" class="nav-item active">
+        <a href="home.html" class="nav-link">Home</a>
+    </div>
+    <div style="margin:10px;" class="nav-item">
+        <a href="news.html" class="nav-link">News</a>
+    </div>
+    <div style="margin:10px;" class="nav-item">
+        <a href="business.html" class="nav-link">Business</a>
+    </div>
+    <div style="margin:10px;" class="nav-item">
+        <a href="tickets.html" class="nav-link">Tickets</a>
+    </div>
+    <img id="loginbtn"
+        style="height: 30px;position: relative;z-index:999;top: 27px;margin: 0 10px;cursor: pointer;"
+        src="./img/login.png" alt="">
+</div>
+</nav>      
+<div class="blue"></div>
+<main style="border-radius: 20px;display: flex;background-color: rgba(164, 190, 206, 0.866);margin:10px 300px;justify-content: space-around;padding: 30px;align-items: center;">
+  <div>
+    <img style="width: 450px;height: 450px;" src="./img/fibex最終.png" alt="">
+  </div>
+    <form action="./api/tickets.php" method="post">
+      <h3 style="position: relative;text-align: center;" class="p-4">購票資訊</h3>
+        <input type="text" name="first_name" id="first_name" class="form-group form-control" required placeholder="First name（名字）">
+        <input type="text" name="last_name" id="last_name" class="form-group form-control" required placeholder="Last name（姓氏）">  
+        <input type="number" name="phone" id="phone" class="form-group form-control" required placeholder="Phone（手機號碼）">
+        <input type="password" name="password" id="password" class="form-group form-control" required placeholder="Password（會員密碼）">
+        <input type="number" name="veri" id="veri" class="form-group form-control" required placeholder="Verification（驗證碼）">
+        <div style="width:450px ;display: flex;flex-direction: row-reverse;">
+          <img style="height: 50px;width: 100px;position: absolute;z-index: -999;" src="./img/code.png" alt="">
+          <div style="position: relative;left: -14px;cursor: pointer;" class="veri" onclick="rc()">0000</div>
+            <div class="btn b-green" onclick="rc()"><span style="z-index: 999;">重新產生驗證碼</span></div>
+        </div>
+      <button type="submit" style="width: 450px;" class="btn btn-dark">Submit(送出)</button>
+    </form>
+</main>
+<!--copyright符號可在html中鍵入 &copy; 來呈現-->
+<div style="display: flex;justify-content: center;position: absolute;bottom: 50px;" class="fixed-bottom">
+  <img style="height: 50px;width: 50px;" src="./img/fb_icon_325x325.png" alt="">
+  <img style="height: 50px;width: 50px;" src="./img/1200x600wa.png" alt="">
+</div>
+<footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
+<script src="./js/jquery-3.6.3.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script>
+  $(".veri").load("./veri.php");
+  function rc(){
+    $(".veri").load("./veri.php");
+  }
+$(".blue").load("./blue.php");
+</script>
+</body>
+</html>

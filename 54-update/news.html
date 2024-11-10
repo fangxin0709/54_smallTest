@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024法國國際商務展(FIBEX)</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+         .img{
+            height:350px;
+            width: 550px;
+        }
+         .btn{
+            width:110px;
+            background-color: rgba(255, 255, 255, 0.783);
+            transform: scale(1);
+            transition: all 0.5S;
+          }
+          .btn:hover{
+            color: #ff0000;
+            background-color: rgba(236, 236, 236, 0.769);
+            transform: scale(1.04);
+            transition: all 0.5S;
+         }
+         .txt{
+            bottom:0;
+            background-color: rgba(0, 0, 0, 0.359);
+            position: absolute;
+            transition: ease 0.5s;
+         }
+         .txt:hover{
+            bottom:0;
+            background-color: rgba(0, 0, 0, 0.58);
+            position: absolute;
+            backdrop-filter: blur(5px);
+            transition: ease 0.5s;
+         }
+         .modal{
+            z-index: 999;
+         }
+         body{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            background-image: url(./img/news1.jpg);
+            transition: background-image 0.5s ease;
+            background-size: 100% 1080px;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(30px);
+        }
+        .m1{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav style="font-size: 30px;display: flex;justify-content: space-between;" class="navbar navbar-expand-lg navbar-light">
+        <img style="height: 70px;width: 75px;" src="./img/fibex最終.png" alt="">
+        <!--快速指法 ul.navbar-nav>li.nav-item*4>a.nav-link -->
+        <div class="navbar-nav">
+            <div style="margin:10px;border-bottom: #2b2b2b86 4px solid;" class="nav-item active">
+                <a href="home.html" class="nav-link">Home</a>
+            </div>
+            <div style="margin:10px;" class="nav-item">
+                <a href="news.html" class="nav-link">News</a>
+            </div>
+            <div style="margin:10px;" class="nav-item">
+                <a href="business.html" class="nav-link">Business</a>
+            </div>
+            <div style="margin:10px;" class="nav-item">
+                <a href="tickets.html" class="nav-link">Tickets</a>
+            </div>
+            <img id="loginbtn"
+                style="height: 30px;position: relative;z-index:999;top: 27px;margin: 0 10px;cursor: pointer;"
+                src="./img/login.png" alt="">
+        </div>
+    </nav>     
+    <div class="blue"></div>
+<main>
+<div class="container d-flex">
+    <div><img src="./img/map.png" alt="" class="img">
+        <div class="position-absolute btn btn-sm" onclick="openmodal(1),closemodal(2),closemodal(3),closemodal(4),closemodal(5)" style ="top:200px;left:485px;">
+            <span>菲律賓</span>
+        </div>
+        <div class="position-absolute btn btn-sm" onclick="openmodal(2),closemodal(1),closemodal(3),closemodal(4),closemodal(5)" style ="top:140px;left:600px;">
+            <span>馬來西亞</span>
+        </div>
+        <div class="position-absolute btn btn-sm" onclick="openmodal(3),closemodal(2),closemodal(1),closemodal(4),closemodal(5)" style ="top:255px;left:505px;">
+            <span>婆羅門</span>
+        </div>
+        <div class="position-absolute btn btn-sm" onclick="openmodal(4),closemodal(2),closemodal(3),closemodal(1),closemodal(5)" style ="top:300px;left:455px;">
+            <span>泗水</span>
+        </div>
+        <div class="position-absolute btn btn-sm" onclick="openmodal(5),closemodal(2),closemodal(3),closemodal(4),closemodal(1)" style ="top:250px;left:650px;">
+            <span>印尼</span>
+        </div>
+</div>
+            <div>
+
+                <div class="modal m1 position-relative">
+                    <img src="./img/news1.jpg" alt="" class="img">
+                    <div class=" text-white px-4 py-2 txt">
+                        (1)A traditional Japanese restaurant in a quaint street of Kyoto, Japan. The restaurant exterior is characterized by classic wooden architecture with pap
+                    </div>
+                </div>
+                <div class="modal m2 position-relative">
+                    <img src="./img/news2.jpg" alt="" class="img">
+                    <div class="text-white px-4 py-2 txt">
+                        (2)Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta explicabo voluptatem temporibus magnam harum expedita incidunt cupiditate, dolor saepe, aliquid dolores. Ipsa veniam vitae iure nulla dolorum, voluptatibus dolor. Veniam.
+                    </div>
+                </div>
+                <div class="modal m3 position-relative">
+                    <img src="./img/news3.jpg" alt="" class="img">
+                    <div class=" text-white px-4 py-2 txt">
+                        (3)Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus corporis quo error, tempora molestiae minus iure dolorem, dolore cum incidunt debitis aliquam obcaecati itaque pariatur velit cumque ex. Reprehenderit, illum?
+                    </div>
+                </div>
+                <div class="modal m4 position-relative">
+                    <img src="./img/news4.jpg" alt="" class="img">
+                    <div class=" text-white px-4 py-2 txt">
+                        (4)Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis natus voluptatibus veniam ipsa. Odio iste quod nemo eaque dolore excepturi eius, quo nisi, veniam similique, quia sunt perspiciatis minus deserunt?
+                    </div>
+                </div>
+                <div class="modal m5 position-relative">
+                    <img src="./img/news5.jpg" alt="" class="img">
+                    <div class=" text-white px-4 py-2 txt">
+                        (5)Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, dicta quasi, fugit beatae soluta perferendis maiores, quod ad facilis modi voluptas corporis quibusdam? Deserunt aliquid eum in dolor ipsa vitae.
+                    </div>
+                </div>
+            </div>
+</div>
+</main>
+<!--copyright符號可在html中鍵入 &copy; 來呈現-->
+<div style="display: flex;justify-content: center;position: absolute;bottom: 50px;" class="fixed-bottom">
+    <img style="height: 50px;width: 50px;" src="./img/fb_icon_325x325.png" alt="">
+    <img style="height: 50px;width: 50px;" src="./img/1200x600wa.png" alt="">
+</div>
+<footer  class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
+<script src="./js/jquery-3.6.3.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script>
+    function openmodal(num){
+    $(".modal.m"+num).fadeIn();
+    $("body").css({
+            'background-image':'url(./img/news'+num+'.jpg)',
+        });
+        $(".btn").css('active');
+    }
+    function closemodal(num){
+        $(".modal.m"+num).css('display','none');
+    }
+    $(".blue").load("./blue.php");
+</script>
+</body>
+</html>

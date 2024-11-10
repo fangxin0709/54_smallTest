@@ -1,0 +1,12 @@
+.bg-primary{
+    background-color: rgba(173, 216, 230, 0.517)!important;
+}
+.nav-link{
+    transition: all 0.5s!important;
+    transform: scale(1)!important;
+}
+.nav-link:hover{
+    border-radius: 10px!important;
+    transition: all 0.5s!important;
+    background-color: rgba(240, 248, 255, 0.313)!important;
+}

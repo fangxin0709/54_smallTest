@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024法國國際商務展(FIBEX)</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .n1 {
+            background-color: #3881dba2;
+            transition: ease 0.5s;
+            position: relative;
+            border: none;
+        }
+        .n1:hover {
+            color: #002671;
+            letter-spacing: 2px;
+    }
+    .n1::before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        transition: ease 0.5s;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #00000076; /* 黑色背景 */
+        z-index: -1;
+    }
+    .n1:hover::before {
+      width: 100%;
+    }
+    .stxt {
+        position: absolute;
+        bottom:0;
+        background-color: rgba(255, 255, 255, 0.363);
+        padding: 15px;
+        width: 100%;
+        z-index: 995;
+        transition: all 0.5S;
+        text-align: center;
+        }
+        
+        .stxt:hover {
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.424);
+            transition: ease 0.3S;
+        } 
+        .simg {
+            display: block;
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            position: relative;
+        }
+    
+        .sb-l,
+        .sb-r {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 0;
+            top: 435px;
+            transition: all 1.0s;
+            background-color: rgba(0, 0, 0, 0.22);
+        }
+    
+        .sb-l:hover {
+            transition: all 0.5s;
+            transform: translateX(-15px);
+            background-color: rgb(0, 0, 0);
+        }
+        
+        .sb-r:hover {
+            transition: all 0.5s;
+            transform: translateX(15px);
+            background-color: rgb(0, 0, 0);
+        }
+        
+        body {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            background-image: url(./img/news1.jpg);
+            transition: background-image 0.5s ease;
+            background-size: 100% 1080px;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(40px);
+        }
+        .carousel-indicators>img{
+            height: 80px;
+            width: 170px;
+            position: relative;
+            top: 120px;
+            margin: 5px;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: ease 0.5s;
+        }
+        .carousel-indicators>img.active{
+            border: 2px solid #7cafd692;
+            opacity: 0.9;
+        }
+        .carousel-indicators>img:hover{
+            transform: translateY(-10px);
+            transition: ease 0.5s;
+        }
+        .sign{
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: #b5b5b558;
+            z-index: 999;
+            bottom: 0;
+        }
+        .sign::before{
+            position: absolute;
+            content: "";
+            background-color: #ffffff6a;
+            height: 5px;
+            width: 0px;
+            animation: sign 3s linear forwards;
+        }
+        @keyframes sign {
+            from{width: 0px;}
+            to{width: 100%;}
+        }
+        #Slider:hover .sign::before{
+            animation: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome"></div>
+    <nav style="font-size: 30px;display: flex;justify-content: space-between;"
+        class="navbar navbar-expand-lg navbar-light">
+        <a href="./index.html"><img style="height: 70px;width: 75px;" src="./img/fibex最終.png" alt=""></a>
+        <!--快速指法 ul.navbar-nav>li.nav-item*4>a.nav-link -->
+        <div class="navbar-nav">
+                <div style="margin:10px;border-bottom: #2b2b2b86 4px solid;" class="nav-item active">
+                    <a href="home.html" class="nav-link">Home</a>
+                </div>
+                <div style="margin:10px;" class="nav-item">
+                    <a href="news.html" class="nav-link">News</a>
+                </div>
+                <div style="margin:10px;" class="nav-item">
+                    <a href="business.html" class="nav-link">Business</a>
+                </div>
+                <div style="margin:10px;" class="nav-item">
+                    <a href="tickets.html" class="nav-link">Tickets</a>
+                </div>
+                <img id="loginbtn"
+                    style="height: 30px;position: relative;z-index:999;top: 27px;margin: 0 10px;cursor: pointer;"
+                    src="./img/login.png" alt="">
+        </div>
+    </nav>
+    <div class="blue"></div>
+    <main>
+        <div style="display: flex;justify-content: space-between;align-items: flex-start;">
+            <div id="Slider" style="top: 30px;right: 10px;" class="carousel slide container w-50" data-ride="carousel">
+                <div class="carousel-indicators">
+                        <img src="./img/news1.jpg" alt="" data-slide-to="0" data-target="#Slider" class="active">
+                        <img src="./img/news2.jpg" alt="" data-slide-to="1" data-target="#Slider">
+                        <img src="./img/news3.jpg" alt="" data-slide-to="2" data-target="#Slider">
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-background="./img/news1.jpg">
+                        <img class="simg" src="./img/news1.jpg" alt="">
+                        <div class="stxt">
+                            <h2>標題一</h2>
+                            <div>內容一</div>
+                        </div>
+                        <div class="sign"></div>
+                    </div>
+                    <div class="carousel-item" data-background="./img/news2.jpg">
+                        <img class="simg" src="./img/news2.jpg" alt="">
+                        <div class="stxt">
+                            <h2>標題二</h2>
+                            <div>內容二</div>
+                        </div>
+                        <div class="sign"></div>
+                    </div>
+                    <div class="carousel-item" data-background="./img/news3.jpg">
+                        <img class="simg" src="./img/news3.jpg" alt="">
+                        <div class="stxt">
+                            <h2>標題三</h2>
+                            <div>內容三</div>
+                        </div>
+                        <div class="sign"></div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev sb-l" style="left: 100px;" data-target="#Slider" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next sb-r" style="right: 100px;" data-target="#Slider" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <div style="background: #ffffff36;padding: 20px;width: 650px;height: 400px;top: 30px;position: relative;right: 160px;display: flex;align-items: center;padding-left: 50px;border-radius: 0 200px 0 0 ;">
+                <h1>歡迎來到<br>
+                    2024法國國際商務展(FIBEX)
+                    <br>
+                    <br>
+                    <a href="./tickets.html" class="btn btn-lg n1">點擊購票 ></a>
+                </h1>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 150px;background-color: #ffffff92;padding: 20px;">
+            <h1 style="text-align: center;">活動資訊區</h1>
+            <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores magni sit, nemo
+                debitis tempore, mollitia quia maiores illo, ut ea expedita consectetur esse id dicta architecto ratione
+                ducimus. Dolore, repudiandae.</p>
+        </div>
+    </main>
+    <div style="display: flex;justify-content: center;position: absolute;bottom: 50px;" class="fixed-bottom">
+        <img style="height: 50px;width: 50px;" src="./img/fb_icon_325x325.png" alt="">
+        <img style="height: 50px;width: 50px;" src="./img/1200x600wa.png" alt="">
+    </div>
+    <footer class="bg-primary fixed-bottom p-2 text-center w-100">Copyright © 2023 YODEX All Rights Reserved</footer>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script>
+        $("#welcome").load("./welcome.php");
+        $(".blue").load("./blue.php");
+        $(".carousel").carousel({
+         interval:3000
+ })
+$(".carousel").on('slid.bs.carousel',function(){
+    var img =$(".carousel-item.active").data("background");
+    $("body").css({
+        'background-image':'url('+img+')'
+    });
+});
+    </script>
+</body>
+</html>
